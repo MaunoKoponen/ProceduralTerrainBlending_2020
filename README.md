@@ -10,8 +10,8 @@ Each terrain object has random combination of landmass types, and adjacent terra
 
 Unity version used: 2020.3.3f1
 
-Usage: Open Menu scene hit play, and input  seed for map. Then wait for several seconds for map to be calculated. Once its done, click point on map and press start to launch the terrain scene.
-To make  debugging easier, player is placed on scene and is able to move while terrain objectsa are still created and populated with data
+Usage: Open Menu scene, hit play, and input an integer seed for map. Then wait for several seconds for map to be calculated. Once its done, click point on map and press start to launch the terrain scene.
+To make  debugging easier, player is placed on scene and is able to move while terrain objects are still created and populated with data. 
 
 I have been using Scrawk's Ceto ocean with this project for easy and great looking solution for water: https://github.com/Scrawk/Ceto 
 

@@ -156,7 +156,7 @@ public class SplatDetailPatch : IPatch  //To save some calls I have merged the s
 
 						//Draw roads
 
-						if(WorldParameters.startedFromMenu)
+						if(WorldParameters.createRoads)
 						{
 							float roadVisibility = InfiniteTerrain.m_alphaMap[z, x, 4] = RoadVisibility(x, z) * 2.0f;
 							amountLeft -= roadVisibility;

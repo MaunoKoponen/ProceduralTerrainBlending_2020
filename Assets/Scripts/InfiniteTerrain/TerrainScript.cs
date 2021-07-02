@@ -73,7 +73,7 @@ public class TerrainScript : MonoBehaviour
 
 		areaData = InfiniteTerrain.GetAreaData(mapX, mapZ);
 
-		if (WorldParameters.startedFromMenu)
+		if (WorldParameters.createRoads)
 		{
 			buildingsGenerated = areaData.artefactList != null;
 
@@ -133,6 +133,9 @@ public class TerrainScript : MonoBehaviour
 	
 	private void MakePathwayBuildings()
 	{
+		if(! buildingPlacer.Tower)
+			return;
+
 		GameObject objectToInstantiate = buildingPlacer.Tower;
 
 		Transform prev = null;

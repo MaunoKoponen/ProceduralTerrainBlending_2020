@@ -116,7 +116,7 @@ public class TreePatch : IPatch
 			//Debug.LogWarning("Evaluating flatness for tree");
 
 			float roadAlpha = 0;
-			if (WorldParameters.startedFromMenu)
+			if (WorldParameters.createRoads)
 			{
 				// roadAlpha =  InfiniteTerrain.m_alphaMap[(int)z * 513, (int)x * 513, 4];
 

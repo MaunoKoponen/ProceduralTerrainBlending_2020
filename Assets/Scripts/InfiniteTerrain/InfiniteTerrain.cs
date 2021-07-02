@@ -192,8 +192,8 @@ public class InfiniteTerrain : InfiniteLandscape
 		stopWatch.Start();
 		UnityEngine.Debug.Log("InfiniteTerrain Awake -> " + stopWatch.Elapsed.Seconds);
 
-		RenderDetailsStatic = RenderDetails;
-		RenderTreesStatic = RenderTrees;
+		RenderDetailsStatic = WorldParameters.renderDetails; // todo use WorldParameters everyWhere for these 
+		RenderTreesStatic = WorldParameters.renderTrees;
 
 		StaticTestCurve = curves.HillCurve;
 		//StaticTestCurve = TestCurve;

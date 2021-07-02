@@ -51,7 +51,11 @@ public class WorldParameters : MonoBehaviour
 
 	public static List<List<PathFind.Point>> AllPathsGlobalCoordinated;
 
-	public static bool startedFromMenu = false;
+	public static bool createRoads = false;
+	public static bool renderTrees = true;
+	public static bool renderDetails = true;
+
+
 
 	private void Awake()
 	{
@@ -218,7 +222,8 @@ public class WorldParameters : MonoBehaviour
 
 		Debug.Log("min  " + min + " max " + max);
 
-		MakePathTest();
+		if(createRoads)
+			MakePathTest();
 
 		worldMapTexture.Apply();
 		slopeTexture.Apply();

@@ -59,7 +59,7 @@ public static class PatchManager
 
 		TerrainInfo ti = new TerrainInfo(globX, globZ, terrain, pos);
 
-		if(WorldParameters.startedFromMenu)
+		if(WorldParameters.createRoads)
 			GeneratePathImage(ti);
 
 		//Debug.Log("Adding new terrainInfo to PatchList: globX: " + globX + " globZ: " + globZ);

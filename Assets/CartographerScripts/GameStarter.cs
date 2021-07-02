@@ -9,10 +9,12 @@ public class GameStarter : MonoBehaviour
 
 	public WorldParameters worldParameters;
 
+	public GameObject SelectedPosition;
+
 	// Start is called before the first frame update
 	void Start()
     {
-		WorldParameters.startedFromMenu = true;
+		//WorldParameters.createRoads = true;
 	}
 
     // Update is called once per frame
@@ -21,8 +23,27 @@ public class GameStarter : MonoBehaviour
         
     }
 
+	public void ToggleTrees(bool state)
+	{
+		WorldParameters.renderTrees = state;
+	}
+
+	public void ToggleTerrainDetails(bool state)
+	{
+		WorldParameters.renderDetails = state;
+	}
+
+	public void ToggleCreateRoads(bool state)
+	{
+		WorldParameters.createRoads = state;
+	}
+
+
+
 	public void ConvertClickToMapCordinate(Vector2 localPoint)
 	{
+		SelectedPosition.transform.localPosition = localPoint;
+
 		Vector2 coordinatesFromZero = localPoint + new Vector2(256, 256);
 		Vector2 selectedTerrain = coordinatesFromZero / (512/worldParameters.worldSizeX); // ok as long as world x and y sizes match 
 		Debug.Log("selectedTerrain  -----------------------> " + Mathf.Floor(selectedTerrain.x ) + "  " + Mathf.Floor(selectedTerrain.y));
